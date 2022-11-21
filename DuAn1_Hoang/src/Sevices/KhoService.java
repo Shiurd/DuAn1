@@ -8,13 +8,16 @@ import Sevices.impSevices.IKhoService;
 import DomainModels.Kho.ToanBoKho;
 import DomainModels.Kho.BangKho;
 import DomainModels.Kho.Bia;
+import DomainModels.Kho.KhoChiTiet;
 import DomainModels.Kho.TongSanPhamKho;
 import Repositories.impRepo.IKhoRepository;
 import Repositories.KhoRepository;
 import ViewModels.Kho.DSBia;
 import ViewModels.Kho.QLBangKho;
+import ViewModels.Kho.QLKhoChiTiet;
 import ViewModels.Kho.QLToanBoKho;
 import ViewModels.Kho.QLTongSPKho;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,6 +32,7 @@ public class KhoService implements IKhoService{
     private List<QLBangKho> _lstQLBangKho;
     private List<QLTongSPKho> _lstQLTongSPKho;
     private List<DSBia> _dsBia;
+    private List<QLKhoChiTiet> _lstKhoChiTiets;
     
     public KhoService(){
         _iKhoRepositories = new KhoRepository();
@@ -36,6 +40,23 @@ public class KhoService implements IKhoService{
         _lstQLBangKho = new ArrayList<>();
         _lstQLBangKho = new ArrayList<>();
         _dsBia = new ArrayList<>();
+        _lstKhoChiTiets = new ArrayList<>();
+    }
+    
+    @Override
+    public List<QLKhoChiTiet> getKhoChiTiet(){
+        _lstKhoChiTiets = new ArrayList<>();
+        var product = _iKhoRepositories.findKhoChiTiet();
+        for (KhoChiTiet x : product) {
+            _lstKhoChiTiets.add(new QLKhoChiTiet(x.getMaSP(), x.getMaKhoString(), x.getSoLuong()));
+        }
+        return _lstKhoChiTiets;
+    }
+    
+    @Override
+    public QLKhoChiTiet createKhoCT(QLKhoChiTiet khoCT){
+        var x = _iKhoRepositories.saveKhoCT(new KhoChiTiet(khoCT.getMaSP(),khoCT.getMaKhoString(),khoCT.getSoLuong()));
+        return new QLKhoChiTiet(x.getMaSP(), x.getMaKhoString(), x.getSoLuong());
     }
     
     @Override

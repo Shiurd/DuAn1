@@ -10,6 +10,7 @@ import DomainModels.Kho.Bia;
 import DomainModels.Kho.TongSanPhamKho;
 import ViewModels.Kho.DSBia;
 import ViewModels.Kho.QLBangKho;
+import ViewModels.Kho.QLKhoChiTiet;
 import ViewModels.Kho.QLToanBoKho;
 import ViewModels.Kho.QLTongSPKho;
 import java.util.List;
@@ -34,4 +35,8 @@ import java.util.List;
      String deleteKho(String maKho);
      
      List<QLToanBoKho> getKhoByMaKho(String id);
+     
+     List<QLKhoChiTiet> getKhoChiTiet();
+     
+     QLKhoChiTiet createKhoCT(QLKhoChiTiet khoCT);
 }

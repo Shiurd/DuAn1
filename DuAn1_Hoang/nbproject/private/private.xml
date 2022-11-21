@@ -3,11 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/FPL/DuAn1_Tung/DuAn1/src/DomainModels/Kho/ToanBoKho.java</file>
-            <file>file:/D:/FPL/DuAn1_Tung/DuAn1/src/Sevices/impSevices/IKhoService.java</file>
-            <file>file:/D:/FPL/DuAn1_Tung/DuAn1/src/View/Display.java</file>
-            <file>file:/D:/FPL/DuAn1_Tung/DuAn1/src/Sevices/KhoService.java</file>
-            <file>file:/D:/FPL/DuAn1_Tung/DuAn1/src/ViewModels/Kho/QLToanBoKho.java</file>
+            <file>file:/D:/New%20folder%20(8)/GitTest/DuAn1_Hoang/src/Sevices/impSevices/IKhoService.java</file>
+            <file>file:/D:/New%20folder%20(8)/GitTest/DuAn1_Hoang/src/Repositories/KhoRepository.java</file>
+            <file>file:/D:/New%20folder%20(8)/GitTest/DuAn1_Hoang/src/Repositories/impRepo/IKhoRepository.java</file>
+            <file>file:/D:/New%20folder%20(8)/GitTest/DuAn1_Hoang/src/View/Display.java</file>
+            <file>file:/D:/New%20folder%20(8)/GitTest/DuAn1_Hoang/src/Sevices/KhoService.java</file>
         </group>
     </open-files>
 </project-private>

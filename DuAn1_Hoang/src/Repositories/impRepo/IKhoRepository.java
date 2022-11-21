@@ -7,6 +7,7 @@ package Repositories.impRepo;
 import DomainModels.Kho.ToanBoKho;
 import DomainModels.Kho.BangKho;
 import DomainModels.Kho.Bia;
+import DomainModels.Kho.KhoChiTiet;
 import DomainModels.Kho.TongSanPhamKho;
 import java.util.List;
 
@@ -30,4 +31,8 @@ public interface IKhoRepository {
     String deleteKho(String maKho);
     
     List<ToanBoKho> findByMaKhoInToanBoKho(String id);
+    
+    List<KhoChiTiet> findKhoChiTiet();
+    
+    KhoChiTiet saveKhoCT(KhoChiTiet khoCT);
 }

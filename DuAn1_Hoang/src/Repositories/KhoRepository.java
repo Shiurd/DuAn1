@@ -8,6 +8,7 @@ import Repositories.impRepo.IKhoRepository;
 import DomainModels.Kho.ToanBoKho;
 import DomainModels.Kho.BangKho;
 import DomainModels.Kho.Bia;
+import DomainModels.Kho.KhoChiTiet;
 import DomainModels.Kho.TongSanPhamKho;
 import Utilities.DBConnection;
 import Utilities.DBConnectionGiang;
@@ -29,6 +30,8 @@ public class KhoRepository implements IKhoRepository {
     final String update_kho = "update Kho set DiaChi = ? , TenKho = ? where MaKho = ?";
     final String delete_kho = "delete from Kho where Makho = ?";
     final String select_in_ToanBoKho = "select A.MaKho, A.TenKho,C.MaBia,C.Ten,A.DiaChi,B.SoLuong from Kho A join KhoChiTiet B on A.MaKho = B.MaKho join Bia C on B.MaBia = C.MaBia where A.MaKho = ?";
+    final String select_khochitiet = "Select * from KhoChiTiet";
+    final String insert_khoChiTiet = "Insert into Kho values (?,?,?)";
     public KhoRepository(){
         dbConnection = new DBConnectionGiang();
     } 
@@ -36,6 +39,7 @@ public class KhoRepository implements IKhoRepository {
     public List<ToanBoKho> findByMaKhoInToanBoKho(String id){
         return getSelectSql(select_in_ToanBoKho, id);
     }
+    
     
     @Override
     public void updateDataKho(BangKho model){
@@ -80,6 +84,16 @@ public class KhoRepository implements IKhoRepository {
         }
 
     }
+    @Override
+    public List<KhoChiTiet> findKhoChiTiet(){
+        return getSelectsqlKhoChiTiet(select_khochitiet);
+    }
+    
+    @Override
+    public KhoChiTiet saveKhoCT(KhoChiTiet khoCT){
+        DBConnection.Excute(insert_khoChiTiet, khoCT.getMaSP(),khoCT.getMaKhoString(),khoCT.getSoLuong());
+        return khoCT;
+    }
     
     public List<BangKho> getSelectsqlTongKho(String sql, Object... args){
         try {
@@ -118,6 +132,19 @@ public class KhoRepository implements IKhoRepository {
       throw new RuntimeException();
     }
   }
+    
+    public List<KhoChiTiet> getSelectsqlKhoChiTiet(String sql, Object... args){
+        try {
+            List<KhoChiTiet> lstcategories = new ArrayList<>();
+            ResultSet rs = DBConnection.getDataFromQuery(sql, args);
+            while (rs.next()) {
+        lstcategories.add(new KhoChiTiet(rs.getString(1),rs.getString(2),rs.getInt(3)));
+      }
+        return lstcategories;
+        } catch (Exception e) {
+          throw new RuntimeException();
+        }
+    }
 //    private List<Kho> getSelectSql(String sql, Object... args) {
 //    try {
 //      List<Kho> lstcategories = new ArrayList<>();
