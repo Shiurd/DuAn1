@@ -45,7 +45,7 @@ public class NSXService implements INSXService{
         }
         return lst; 
 }
-    
+    @Override
     public QLNSX createNSX(QLNSX qlNSX){
         var x = iNSXReponsitory.createNSX(new NSX(qlNSX.getMaNSX(),qlNSX.getTenNSX()));
         return new QLNSX(x.getMaNSX(),x.getTenNSX());

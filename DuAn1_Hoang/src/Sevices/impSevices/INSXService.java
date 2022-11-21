@@ -16,5 +16,5 @@ import java.util.ArrayList;
 public interface INSXService {
     ArrayList<NSX> fillListNSX();
     
-    
+    QLNSX createNSX(QLNSX qlNSX);
 }

@@ -22,7 +22,7 @@ import java.util.logging.Logger;
  */
 public class NSXReponsitory implements INSXReponsitory{
     
-    final String Insert_into_NSX = "insert into NSX values(?,?)";
+    final String Insert_into_NSX = "insert into NhaSx(MaNSX,TenNSX) values(?,?)";
       private ArrayList<NSX> lstNSX;
      
     java.sql.ResultSet rs = null;

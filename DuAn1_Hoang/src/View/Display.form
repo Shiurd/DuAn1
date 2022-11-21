@@ -2610,36 +2610,41 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="320" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
                                           <Component id="jLabel30" min="-2" pref="56" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="198" max="-2" attributes="0"/>
                                           <Component id="jLabel31" min="-2" pref="70" max="-2" attributes="0"/>
                                       </Group>
-                                      <Group type="102" attributes="0">
-                                          <Component id="txtMaNSX_QLNSX" min="-2" pref="236" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" attributes="0">
-                                                  <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
-                                                  <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="txtTenNSX_QLNSX" min="-2" pref="236" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="jButton1" min="-2" pref="73" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jButton2" min="-2" pref="73" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jButton4" min="-2" pref="73" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jButton3" min="-2" pref="73" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="txtMaNSX_QLNSX" min="-2" pref="236" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" attributes="0">
+                                                      <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
+                                                      <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" attributes="0">
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                      <Component id="txtTenNSX_QLNSX" min="-2" pref="236" max="-2" attributes="0"/>
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                          <Component id="jButton4" max="32767" attributes="0"/>
+                                                          <Component id="btnAddNSX" pref="100" max="32767" attributes="0"/>
+                                                      </Group>
+                                                      <EmptySpace max="32767" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                          <Component id="jButton2" max="32767" attributes="0"/>
+                                                          <Component id="jButton3" pref="100" max="32767" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
                                               </Group>
                                           </Group>
+                                          <Component id="jScrollPane5" alignment="0" min="-2" pref="767" max="-2" attributes="0"/>
                                       </Group>
-                                      <Component id="jScrollPane5" alignment="0" max="32767" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="587" max="32767" attributes="0"/>
+                                  <EmptySpace pref="638" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -2657,14 +2662,17 @@
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="txtMaNSX_QLNSX" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                       <Component id="txtTenNSX_QLNSX" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                      <Component id="jButton1" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <Component id="btnAddNSX" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                                       <Component id="jButton2" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
-                                      <Component id="jButton4" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                      <Component id="jButton3" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jButton4" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Component id="jButton3" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                                   <Component id="jScrollPane5" min="-2" pref="292" max="-2" attributes="0"/>
-                                  <EmptySpace pref="190" max="32767" attributes="0"/>
+                                  <EmptySpace pref="210" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -2734,23 +2742,41 @@
                         </Component>
                         <Component class="javax.swing.JTextField" name="txtMaNSX_QLNSX">
                         </Component>
-                        <Component class="javax.swing.JButton" name="jButton1">
+                        <Component class="javax.swing.JButton" name="btnAddNSX">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/icon/icons8-add-new-24.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Th&#xea;m"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddNSXActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton2">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/icon/icons8-pencil-30.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="S&#x1eed;a"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton3">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/icon/icons8-renew-24.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="L&#xe0;m m&#x1edb;i"/>
                           </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+                          </Events>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton4">
                           <Properties>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/icon/icons8-trash-24.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="X&#xf3;a"/>
                           </Properties>
                         </Component>
