@@ -4,7 +4,7 @@
  */
 package Sevices;
 
-import DomainModels.NhanVien;
+import DomainModels.NhanVien1;
 import Repositories.impRepo.IKhoRepository;
 import Sevices.impSevices.INSXService;
 import DomainModels.NSX;

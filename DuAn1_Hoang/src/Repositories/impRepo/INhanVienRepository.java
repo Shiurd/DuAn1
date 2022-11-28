@@ -4,7 +4,8 @@
  */
 package Repositories.impRepo;
 
-import DomainModels.NhanVien;
+import DomainModels.NhanVien1;
+import ViewModels.QLNhanVien;
 import java.util.ArrayList;
 import java.sql.ResultSet;
 
@@ -14,7 +15,14 @@ import java.sql.ResultSet;
  */
 public interface INhanVienRepository {
 
-    ArrayList<NhanVien> getAllNhanViens();
+    ArrayList<NhanVien1> getAllNhanViens();
 
-    NhanVien mappingNhanVien(ResultSet rs);
+    NhanVien1 mappingNhanVien(ResultSet rs);
+
+    int themNhanVien(QLNhanVien qlnv);
+
+    int suaNhanVien(String maNV, QLNhanVien qlnv);
+
+    int xoaNhanVien(String maNV);
+
 }

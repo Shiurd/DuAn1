@@ -4,7 +4,7 @@
  */
 package Repositories;
 
-import DomainModels.NhanVien;
+import DomainModels.NhanVien1;
 import Repositories.impRepo.INSXReponsitory;
 import Utilities.DBConnectionDat;
 import Utilities.DBConnection;
@@ -54,7 +54,7 @@ public class NSXReponsitory implements INSXReponsitory{
                 }
             }
         } catch (SQLException ex) {
-            Logger.getLogger(NhanVienRepository.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(NhanVienRepository_1.class.getName()).log(Level.SEVERE, null, ex);
         }
         return lst;
 
@@ -69,7 +69,7 @@ public class NSXReponsitory implements INSXReponsitory{
 
                 return new NSX(ma, ten);
             } catch (SQLException ex) {
-                Logger.getLogger(NhanVienRepository.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(NhanVienRepository_1.class.getName()).log(Level.SEVERE, null, ex);
             }
 
         }

@@ -32,6 +32,7 @@ public class KhoRepository implements IKhoRepository {
     final String select_in_ToanBoKho = "select A.MaKho, A.TenKho,C.MaBia,C.Ten,A.DiaChi,B.SoLuong from Kho A join KhoChiTiet B on A.MaKho = B.MaKho join Bia C on B.MaBia = C.MaBia where A.MaKho = ?";
     final String select_khochitiet = "Select * from KhoChiTiet";
     final String insert_khoChiTiet = "Insert into Kho values (?,?,?)";
+    final String delete_kho_ChiTiet = "Delete from KhoChiTiet where MaSP = ? and MaKho = ?";
     public KhoRepository(){
         dbConnection = new DBConnectionGiang();
     } 

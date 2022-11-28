@@ -14,4 +14,10 @@ import java.util.ArrayList;
 public interface INhanVienService {
 
     ArrayList<QLNhanVien> fillListNhanViens();
+
+    String themNhanVien(QLNhanVien qlnv);
+
+    String suaNhanVien(String maNV, QLNhanVien qlnv);
+
+    String xoaNhanVien(String maNV);
 }
